@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Bakery.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<p>Check out these products and our great prices!</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ProductName)</th>
+        <th>@Html.DisplayNameFor(model => model.ProductPrice)</th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.ProductName)</td>
+            <td>@Html.DisplayFor(model => item.ProductPrice)</td>
+            
+        </tr>
+    }
+</table>

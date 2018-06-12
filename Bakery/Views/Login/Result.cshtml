@@ -1,0 +1,15 @@
+﻿@model Bakery.Models.LoginClass
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+
+@if (Model.PersonKey != 0)
+{
+    <p>Welcome, @Html.DisplayFor(mode => Model.UserName), Thank you for loggin in</p>
+}
+else
+{
+    <p>Invalid login, please try to login again or register.</p>
+}
